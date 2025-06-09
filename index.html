@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio Futurista</title>
+    <!-- Incluye Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuente Inter de Google Fonts para un aspecto moderno y limpio -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para el cuerpo y la fuente */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Degradado de fondo oscuro para un look futurista */
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            color: #E0E0E0; /* Color de texto claro */
+            min-height: 100vh; /* Asegura que el cuerpo ocupe toda la altura de la ventana */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Estilo para secciones con fondo de degradado */
+        .section-gradient {
+            background: linear-gradient(45deg, #1f2937, #111827); /* Degradado sutil */
+            border-radius: 1rem; /* Bordes redondeados */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Sombra para profundidad */
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Estilo para botones con efecto hover */
+        .btn-primary {
+            @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-lg;
+        }
+
+        /* Estilo para enlaces interactivos */
+        .link-interactive {
+            @apply text-blue-400 hover:text-blue-500 transition duration-300 ease-in-out;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Encabezado de la página -->
+    <header class="w-full py-6 px-4 md:px-8 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg shadow-lg">
+        <nav class="container mx-auto flex justify-between items-center">
+            <!-- Logo o nombre del portafolio -->
+            <a href="#" class="text-3xl font-bold text-blue-400">
+                <span class="hover:text-blue-500 transition duration-300">Mi Portafolio</span>
+            </a>
+            <!-- Menú de navegación (oculto en móviles, se muestra en pantallas grandes) -->
+            <ul class="hidden md:flex space-x-8 text-lg">
+                <li><a href="#about" class="link-interactive">Sobre Mí</a></li>
+                <li><a href="#skills" class="link-interactive">Habilidades</a></li>
+                <li><a href="#projects" class="link-interactive">Proyectos</a></li>
+                <li><a href="#contact" class="link-interactive">Contacto</a></li>
+            </ul>
+            <!-- Botón de menú para móviles (placeholder, se requiere JS para funcionalidad) -->
+            <button class="md:hidden text-white text-2xl focus:outline-none">
+                &#9776; <!-- Icono de hamburguesa -->
+            </button>
+        </nav>
+    </header>
+
+    <!-- Contenido principal -->
+    <main class="container mx-auto my-8 p-4 md:p-8 w-full max-w-6xl">
+
+        <!-- Sección de Héroe (Bienvenida) -->
+        <section id="hero" class="text-center py-20 px-4 section-gradient">
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in-down">
+                Hola, soy <span class="text-blue-400">Tu Nombre</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in-up">
+                Desarrollador <span class="text-blue-300">Front-end</span> y <span class="text-blue-300">Back-end</span> con pasión por la creación de experiencias digitales innovadoras.
+            </p>
+            <a href="#projects" class="btn-primary animate-scale-in">Ver Mis Proyectos</a>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="section-gradient">
+            <h2 class="text-4xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">Sobre Mí</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4 text-gray-300">
+                    <p>
+                        Soy un desarrollador de software con experiencia en la construcción de aplicaciones web robustas y escalables. Me especializo en tecnologías modernas y me encanta enfrentar nuevos desafíos. Mi objetivo es crear soluciones elegantes y eficientes que impulsen el éxito de los proyectos.
+                    </p>
+                    <p>
+                        Con un enfoque en la calidad del código y la experiencia del usuario, disfruto transformando ideas complejas en interfaces intuitivas y funcionalidades poderosas. Siempre estoy aprendiendo y explorando las últimas tendencias para mantenerme a la vanguardia.
+                    </p>
+                </div>
+                <div class="flex justify-center items-center">
+                    <!-- Placeholder para imagen de perfil -->
+                    <img src="https://placehold.co/300x300/1E3A8A/FFFFFF?text=Tu+Foto" alt="Foto de perfil" class="rounded-full border-4 border-blue-500 shadow-xl object-cover w-48 h-48 md:w-64 md:h-64">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Habilidades -->
+        <section id="skills" class="section-gradient">
+            <h2 class="text-4xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">Habilidades</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <!-- Habilidad 1 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-md">
+                    <img src="https://placehold.co/64x64/2563EB/FFFFFF?text=JS" alt="Icono JavaScript" class="mx-auto mb-3">
+                    <p class="text-xl font-semibold text-white">JavaScript</p>
+                </div>
+                <!-- Habilidad 2 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-md">
+                    <img src="https://placehold.co/64x64/3B82F6/FFFFFF?text=React" alt="Icono React" class="mx-auto mb-3">
+                    <p class="text-xl font-semibold text-white">React.js</p>
+                </div>
+                <!-- Habilidad 3 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-md">
+                    <img src="https://placehold.co/64x64/4F46E5/FFFFFF?text=Node" alt="Icono Node.js" class="mx-auto mb-3">
+                    <p class="text-xl font-semibold text-white">Node.js</p>
+                </div>
+                <!-- Habilidad 4 -->
+                <div class="bg-gray-800 p-6 rounded-lg hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-md">
+                    <img src="https://placehold.co/64x64/DC2626/FFFFFF?text=DB" alt="Icono Base de Datos" class="mx-auto mb-3">
+                    <p class="text-xl font-semibold text-white">Bases de Datos</p>
+                </div>
+                <!-- Puedes añadir más habilidades aquí -->
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="projects" class="section-gradient">
+            <h2 class="text-4xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">Proyectos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/400x250/2E2E2E/A0A0A0?text=Proyecto+1" alt="Imagen del Proyecto 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Aplicación Web Futurista</h3>
+                        <p class="text-gray-400 mb-4">
+                            Una aplicación web interactiva desarrollada con React y Node.js, presentando una interfaz de usuario limpia y moderna.
+                        </p>
+                        <a href="https://github.com/tu_usuario/proyecto-1" target="_blank" class="link-interactive">Ver en GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/400x250/2E2E2E/A0A0A0?text=Proyecto+2" alt="Imagen del Proyecto 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Sistema de Gestión Avanzado</h3>
+                        <p class="text-gray-400 mb-4">
+                            Desarrollo de un sistema de gestión de datos robusto con base de datos NoSQL y API RESTful.
+                        </p>
+                        <a href="https://github.com/tu_usuario/proyecto-2" target="_blank" class="link-interactive">Ver en GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-xl transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/400x250/2E2E2E/A0A0A0?text=Proyecto+3" alt="Imagen del Proyecto 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Landing Page Minimalista</h3>
+                        <p class="text-gray-400 mb-4">
+                            Diseño y desarrollo de una landing page de alto rendimiento con animaciones CSS.
+                        </p>
+                        <a href="https://github.com/tu_usuario/proyecto-3" target="_blank" class="link-interactive">Ver en GitHub &rarr;</a>
+                    </div>
+                </div>
+                <!-- Puedes añadir más proyectos aquí -->
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="section-gradient">
+            <h2 class="text-4xl font-bold text-white mb-6 border-b-2 border-blue-600 pb-2">Contacto</h2>
+            <p class="text-lg text-gray-300 mb-8 text-center">
+                ¿Interesado en trabajar juntos o simplemente saludar? ¡No dudes en contactarme!
+            </p>
+            <div class="max-w-xl mx-auto space-y-6">
+                <!-- Formulario de Contacto (ejemplo, se requiere backend para funcionalidad) -->
+                <form action="#" method="POST" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu Nombre"
+                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com"
+                               class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Mensaje:</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Tu Mensaje"
+                                  class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-200"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                    </div>
+                </form>
+                <div class="text-center text-gray-400 mt-8">
+                    <p>O encuéntrame en:</p>
+                    <div class="flex justify-center space-x-6 mt-4">
+                        <a href="https://linkedin.com/in/tu_perfil" target="_blank" class="link-interactive text-2xl hover:text-blue-500 transition duration-300">
+                            <!-- Icono de LinkedIn (placeholder) -->
+                            <img src="https://placehold.co/32x32/0A66C2/FFFFFF?text=LI" alt="LinkedIn" class="inline-block w-8 h-8">
+                        </a>
+                        <a href="https://github.com/tu_usuario" target="_blank" class="link-interactive text-2xl hover:text-gray-200 transition duration-300">
+                            <!-- Icono de GitHub (placeholder) -->
+                            <img src="https://placehold.co/32x32/333333/FFFFFF?text=GH" alt="GitHub" class="inline-block w-8 h-8">
+                        </a>
+                        <!-- Puedes añadir más enlaces a redes sociales -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="w-full py-6 px-4 md:px-8 bg-gray-900 bg-opacity-80 backdrop-filter backdrop-blur-lg mt-8 text-center text-gray-500">
+        <p>&copy; 2025 Juan Martin Barrientos. Todos los derechos reservados.</p>
+        <p class="text-sm mt-2">Diseñado con <span class="text-red-500">&hearts;</span> y Tailwind CSS</p>
+    </footer>
+
+    <!-- Animaciones CSS (solo para demostrar, puedes expandir con librerías JS como AOS) -->
+    <style>
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-scale-in { animation: scaleIn 0.8s ease-out forwards; }
+    </style>
+
+</body>
+</html>
